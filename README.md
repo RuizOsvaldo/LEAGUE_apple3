@@ -1,7 +1,7 @@
 # Advanced Apple Collector
 
 ## Introduction @unplugged
-Welcome to Advanced Apple Collector! This game builds on the basic collector game by adding a new challenge: bad apples that you need to avoid! Collecting bad apples will cost you points. You'll learn how to create custom sprite kinds and manage multiple types of collectibles. Let's get started!
+Welcome to The LEAGUE's Advanced Apple Collector game! This game builds on the basic collector game by adding a new challenge: bad apples that you need to avoid! Collecting bad apples will cost you points. You'll learn how to create custom sprite kinds and manage multiple types of collectibles. Let's get started!
 
 ## Step 1
 
