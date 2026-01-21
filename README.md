@@ -3,19 +3,8 @@
 ## Introduction @unplugged
 Welcome to The LEAGUE's Advanced Apple Collector game! This game builds on the basic collector game by adding a new challenge: bad apples that you need to avoid! Collecting bad apples will cost you points. You'll learn how to create custom sprite kinds and manage multiple types of collectibles. Let's get started!
 
+
 ## Step 1
-
-First, let's create a custom sprite kind for the bad apples.
-
-At the **very top** of your workspace, add a ``||sprites:namespace||`` block. Inside it, create a new SpriteKind called **BadFood**.
-
-```blocks
-namespace SpriteKind {
-    export const BadFood = SpriteKind.create()
-}
-```
-
-## Step 2
 
 Set up the game environment with a background color.
 
@@ -25,7 +14,7 @@ From ``||scene:Scene||``, use ``||scene:set background color||`` and choose your
 scene.setBackgroundColor(7)
 ```
 
-## Step 3
+## Step 2
 
 Create the player character.
 
@@ -36,7 +25,7 @@ scene.setBackgroundColor(7)
 let player = sprites.create(sprites.castle.heroWalkFront1, SpriteKind.Player)
 ```
 
-## Step 4
+## Step 3
 
 Add movement controls to the player.
 
@@ -48,7 +37,7 @@ let player = sprites.create(sprites.castle.heroWalkFront1, SpriteKind.Player)
 controller.moveSprite(player, 100, 100)
 ```
 
-## Step 5
+## Step 4
 
 Keep the player on screen.
 
@@ -61,7 +50,7 @@ controller.moveSprite(player, 100, 100)
 player.setStayInScreen(true)
 ```
 
-## Step 6
+## Step 5
 
 Initialize the score counter.
 
@@ -75,7 +64,7 @@ player.setStayInScreen(true)
 info.setScore(0)
 ```
 
-## Step 7
+## Step 6
 
 Add a countdown timer for the game.
 
@@ -90,7 +79,7 @@ info.setScore(0)
 info.startCountdown(30)
 ```
 
-## Step 8
+## Step 7
 
 Make good apples spawn automatically during gameplay.
 
@@ -103,7 +92,7 @@ game.onUpdateInterval(1500, function () {
 })
 ```
 
-## Step 9
+## Step 8
 
 Inside the update interval, create good apple sprites.
 
@@ -116,11 +105,11 @@ game.onUpdateInterval(1500, function () {
 })
 ```
 
-## Step 10
+## Step 9
 
-Make each apple appear at a random location.
+Make each apple appear at a random location. 
 
-Use ``||sprites:set position||`` with ``||math:pick random||`` values:
+Use ``||sprites:set position||`` with ``||math:pick random||`` for both values:
 - x: random from **10** to **150**
 - y: random from **10** to **110**
 
@@ -132,7 +121,7 @@ game.onUpdateInterval(1500, function () {
 })
 ```
 
-## Step 11
+## Step 10
 
 Now add bad apples that spawn less frequently!
 
@@ -144,7 +133,7 @@ game.onUpdateInterval(4000, function () {
 })
 ```
 
-## Step 12
+## Step 11
 
 Inside this new interval, create bad apple sprites.
 
@@ -156,7 +145,7 @@ game.onUpdateInterval(4000, function () {
 })
 ```
 
-## Step 13
+## Step 12
 
 Position bad apples randomly, just like the good apples.
 
@@ -169,7 +158,7 @@ game.onUpdateInterval(4000, function () {
 })
 ```
 
-## Step 14
+## Step 13
 
 Handle collecting good apples.
 
@@ -184,7 +173,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 })
 ```
 
-## Step 15
+## Step 14
 
 Handle touching bad apples (this is the new mechanic!).
 
@@ -201,7 +190,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.BadFood, function (sprite, other
 })
 ```
 
-## Step 16
+## Step 15
 
 Finally, end the game when the countdown finishes.
 
