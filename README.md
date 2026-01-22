@@ -18,7 +18,7 @@ scene.setBackgroundColor(7)
 
 Create the player character.
 
-From ``||sprites:Sprites||``, ``||sprites:create a sprite||`` named **player** with kind **Player**. You can use the built-in `heroWalkFront1` sprite from the castle gallery.
+From ``||sprites:Sprites||``, ``||sprites:create a sprite||`` named **player** with kind **Player**.
 
 ```blocks
 scene.setBackgroundColor(7)
@@ -83,7 +83,7 @@ info.startCountdown(30)
 
 Make good apples spawn automatically during gameplay.
 
-From ``||game:Game||``, use ``||game:on game update every 1500 ms||`` to spawn apples every 1.5 seconds.
+From ``||game:Game||``, use ``||game:on game update every 2000 ms||`` to spawn apples every 2 seconds.
 
 ```blocks
 let apple: Sprite = null
@@ -96,7 +96,7 @@ game.onUpdateInterval(1500, function () {
 
 Inside the update interval, create good apple sprites.
 
-``||sprites:Create a sprite||`` named **apple** with kind **Food** using the `smallApple` sprite from the food gallery.
+``||sprites:Create a sprite||`` named **apple** with kind **Food** using the an image from the food gallery.
 
 ```blocks
 let apple: Sprite = null
@@ -137,7 +137,7 @@ game.onUpdateInterval(4000, function () {
 
 Inside this new interval, create bad apple sprites.
 
-``||sprites:Create a sprite||`` named **badApple** with kind **BadFood** (the custom kind you created earlier). Use the `skellyFront` sprite from the castle gallery.
+``||sprites:Create a sprite||`` named **badApple** (Red oval) with kind **BadFood** (Blue oval). You can edit the previous apple image or choose another sprite.
 
 ```blocks
 game.onUpdateInterval(4000, function () {
